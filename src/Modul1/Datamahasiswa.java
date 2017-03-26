@@ -205,7 +205,7 @@ public class Datamahasiswa extends javax.swing.JFrame {
         {
         if (txtNPM.getText().length()== 0)
         {
-            JOptionPane.showMessageDialog(null,"Masukan Tidak Boleh Kosong","Konfirmasi",JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null,"NPM Tidak Boleh Kosong","Konfirmasi",JOptionPane.INFORMATION_MESSAGE);
             txtNPM.requestFocus();
             return;
         }
