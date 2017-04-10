@@ -33,6 +33,7 @@ public class suhu extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -52,6 +53,8 @@ public class suhu extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
+
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Konversi Suhu");
 
@@ -64,6 +67,7 @@ public class suhu extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(rbcls);
         rbcls.setText("Celcius");
         rbcls.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,6 +75,7 @@ public class suhu extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(rbkln);
         rbkln.setText("Kelvin");
         rbkln.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -78,6 +83,7 @@ public class suhu extends javax.swing.JFrame {
             }
         });
 
+        buttonGroup1.add(rbfh);
         rbfh.setText("Fahrenheit");
         rbfh.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -159,22 +165,21 @@ public class suhu extends javax.swing.JFrame {
                         .addGap(28, 28, 28)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtcls, javax.swing.GroupLayout.DEFAULT_SIZE, 259, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addGroup(jPanel1Layout.createSequentialGroup()
-                                    .addGap(8, 8, 8)
-                                    .addComponent(jButton1)
-                                    .addGap(31, 31, 31)
-                                    .addComponent(jButton2)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
-                                    .addComponent(jButton3))
-                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                                    .addComponent(rbcls)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(rbkln)
-                                    .addGap(38, 38, 38)
-                                    .addComponent(rbfh))
-                                .addComponent(txtawal, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(txtkln, javax.swing.GroupLayout.Alignment.LEADING)))))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGap(8, 8, 8)
+                                .addComponent(jButton1)
+                                .addGap(31, 31, 31)
+                                .addComponent(jButton2)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                                .addComponent(jButton3))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(rbcls)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(rbkln)
+                                .addGap(38, 38, 38)
+                                .addComponent(rbfh))
+                            .addComponent(txtawal)
+                            .addComponent(txtkln))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -258,10 +263,10 @@ public class suhu extends javax.swing.JFrame {
     private void rbfhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbfhActionPerformed
         // TODO add your handling code here:
         input=Double.parseDouble(txtawal.getText());
-        
         farenheit=input;
         celcius=(farenheit-32)/1.8;
         kelvin=(farenheit+459.67)/1.8;
+        
         
     }//GEN-LAST:event_rbfhActionPerformed
 
@@ -375,6 +380,7 @@ public class suhu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
